@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-print('''The Zen of Python, by Tim Peters
+Zen = '''The Zen of Python, by Tim Peters
 
 Beautiful is better than ugly.
 Explicit is better than implicit.
@@ -20,5 +20,5 @@ Although never is often better than *right* now.
 If the implementation is hard to explain, it's a bad idea.
 If the implementation is easy to explain, it may be a good idea.
 Namespaces are one honking great idea -- let's do more of those!
-''')
-
+'''
+print(Zen[0:97])
