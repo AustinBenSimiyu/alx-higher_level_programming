@@ -10,13 +10,13 @@ Importing function from the module:
 
 Passing first_name and last_name correctly
 
-    >>> say_my_name("Jilks", "Smith")
-    My name is Jilks Smith
+    >>> say_my_name("Austin", "Simiyu")
+    My name is Austin Simiyu
 
 Passing first_name and last_name correctly 2
 
-    >>> say_my_name("Jilks")
-    My name is Jilks 
+    >>> say_my_name("Austin")
+    My name is Simiyu 
 
 Passing None as the last_name
 
