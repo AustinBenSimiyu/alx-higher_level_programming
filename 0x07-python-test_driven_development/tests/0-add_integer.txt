@@ -1,0 +1,96 @@
+The ``0-add_integer`` module
+======================
+
+Using ``add_integer``
+-------------------
+import:
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+tests:
+    int + int:
+	    >>> add_integer(21, 21)
+	    42
+
+    float + float:
+        >>> add_integer(21.33, 21.33)
+        42
+
+    int + float:
+        >>> add_integer(21, 21.66)
+        42
+
+    float + int:
+        >>> add_integer(21.66, 21)
+        42
+
+    -int + -int:
+        >>> add_integer(-21, -21)
+        -42
+
+    -int + int:
+        >>> add_integer(-21, 63)
+        42
+
+    str + int:
+        >>> add_integer("str", 42)
+        Traceback (most recent call last):
+        TypeError: a must be an integer
+
+    int + str:
+        >>> add_integer(42, "str")
+        Traceback (most recent call last):
+        TypeError: b must be an integer
+
+    str + str:
+        >>> add_integer("hello", "world")
+        Traceback (most recent call last):
+        TypeError: a must be an integer
+
+    boolean:
+        >>> add_integer(True, False)
+        Traceback (most recent call last):
+        TypeError: a must be an integer
+
+    no args:
+        >>> add_integer()
+        Traceback (most recent call last):
+        TypeError: add_integer() missing 1 required positional argument: 'a'
+
+    one arg:
+        >>> add_integer(-56)
+        42
+
+    more than two args:
+        >>> add_integer(1, 2, 3)
+        Traceback (most recent call last):
+        TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+
+    list:
+        >>> add_integer([42], [66])
+        Traceback (most recent call last):
+        TypeError: a must be an integer
+
+    tuple:
+        >>> add_integer((42,), (66,))
+        Traceback (most recent call last):
+        TypeError: a must be an integer
+
+    None:
+        >>> add_integer(None)
+        Traceback (most recent call last):
+        TypeError: a must be an integer
+
+    mixed types:
+        >>> add_integer(42x, 66z)
+        Traceback (most recent call last):
+        SyntaxError: invalid syntax
+
+    overflow:
+        >>> add_integer(4e2000, 100e200)
+        Traceback (most recent call last):
+        OverflowError: cannot convert float infinity to integer
+
+    is nan:
+        >>> add_integer(float('NaN'))
+        Traceback (most recent call last):
+        ValueError: cannot convert float NaN to integer
